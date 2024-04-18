@@ -1,0 +1,57 @@
+# CarrierServiceModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional] 
+**carrier_id** | **int** |  | [optional] 
+**name** | **str** |  | 
+**abbreviation** | **str** |  | 
+**display_name** | **str** |  | [optional] 
+**custom_disclaimer_message** | **str** |  | [optional] 
+**custom_eta_interpolation_string** | **str** |  | [optional] 
+**carrier_service_surcharges** | [**list[Surcharge]**](Surcharge.md) |  | [optional] 
+**carrier** | [**Carrier**](Carrier.md) |  | [optional] 
+**carrier_service_group_id** | **int** |  | [optional] 
+**accumulate_time** | **bool** | When true, all time breaks calculate a route by accumulating the various breaks.  When false, a route is calculated by time * number of hours | [optional] 
+**accumulate_distance** | **bool** | When true, all distance breaks calculate a route by accumulating the various breaks.  When false, a route is calculated by distance * number of kms | [optional] 
+**accumulate_weight** | **bool** | When true, all weight breaks calculate a route by accumulating the various breaks.  When false, a route is calculated by weight * number of kms | [optional] 
+**accumulate_pieces** | **bool** | When true, all pieces breaks calculate a route by accumulating the various breaks.  When false, a route is calculated by weight * number of kms | [optional] 
+**accumulate_pallet_spaces** | **bool** | When true, all pallet space breaks calculate a route by accumulating the various breaks.  When false, a route uses a singular matching break | [optional] 
+**foot_print_pro_rata_type** | [**ProRataType**](ProRataType.md) |  | [optional] 
+**weight_pro_rata_type** | [**ProRataType**](ProRataType.md) |  | [optional] 
+**pro_rata_decimal_places** | **int** |  | [optional] 
+**pro_rata_rounding_type** | [**WeightRoundingType**](WeightRoundingType.md) |  | [optional] 
+**total_volume_calculation_type** | [**TotalVolumeCalculationType**](TotalVolumeCalculationType.md) |  | [optional] 
+**max_total_volume** | **float** |  | [optional] 
+**max_total_footprint** | **float** |  | [optional] 
+**max_item_length** | **float** |  | [optional] 
+**max_item_width** | **float** |  | [optional] 
+**max_item_height** | **float** |  | [optional] 
+**max_item_weight** | **float** |  | [optional] 
+**max_total_weight** | **float** |  | [optional] 
+**max_item_volume** | **float** |  | [optional] 
+**default_time_duration** | **float** | This is the default time for each lane rate for this service. This gets used if no transit duration is specified for a lane rate | [optional] 
+**default_distance_duration** | **float** | This is the default distance for each lane rate for this service. This gets used if no transit duration is specified for a lane rate | [optional] 
+**carrier_lane_rates** | [**list[CarrierLaneRate]**](CarrierLaneRate.md) |  | [optional] 
+**custom_field_sets** | [**list[CustomFieldSet]**](CustomFieldSet.md) |  | [optional] 
+**custom_values** | [**list[CustomValue]**](CustomValue.md) |  | [optional] 
+**service_containers** | [**list[CarrierServiceContainer]**](CarrierServiceContainer.md) |  | [optional] 
+**serialised_custom_fields** | **str** | String&#x27;ed version of the carrier reference to this service.  This should only ever be used for carrier integration | [optional] 
+**weight_rounding_type** | [**WeightRoundingType**](WeightRoundingType.md) |  | [optional] 
+**pallet_spaces_rounding_type** | [**WeightRoundingType**](WeightRoundingType.md) |  | [optional] 
+**business_days_only** | **bool** |  | [optional] 
+**runs_on_public_holidays** | **bool** |  | [optional] 
+**weight_pro_rata_calculation_type** | [**WeightProRataCalculationType**](WeightProRataCalculationType.md) |  | [optional] 
+**consignment_batching_allowed** | **bool** | A flag indicating whether this service allows Consignment Batching - ie multiple consignments  to be booked at once | [optional] 
+**routing_no_lane_rates_type** | [**RoutingNoLaneRatesType**](RoutingNoLaneRatesType.md) |  | [optional] 
+**carrier_service_group_order** | **int** |  | [optional] 
+**pricing_mechanism_type** | [**PricingMechanismType**](PricingMechanismType.md) |  | [optional] 
+**enable_receiver_pays** | **bool** |  | [optional] 
+**is_hourly** | **bool** |  | [optional] 
+**dg_enabled** | **bool** |  | [optional] 
+**allow_consignment_consolidation** | **bool** | This flag controls whether other consignments can be consolidated into a consignment of this service, and if  consignments of this service can be consolidated onto other consignments. Machship.Common.Models.Carriers.Carrier.AllowConsignmentConsolidation  will have to be set to true in addition to this for consolidation to happen | [optional] 
+**pallet_space_pro_rata_type** | [**ProRataType**](ProRataType.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

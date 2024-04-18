@@ -1,0 +1,50 @@
+# CreateQuoteV2
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**company_id** | **int** | An (optional) Machship ID of a company. When supplied the routes will be those of the company specified, when left  blank they will be routes for the company associated with the authorised user. | [optional] 
+**despatch_date_time_utc** | **datetime** | Optional: The UTC despatch datetime that was provided in the route. If the DespatchDateTimeLocal is provided, this does not need to be set. If no time is set, it will default to NOW (UTC) | [optional] 
+**despatch_date_time_local** | **datetime** | Optional: The local despatch datetime that was provided in the route. This datetime must be local to the pickup location. If the DespatchDateTimeUtc is provided, this does not need to be set. If no time is set, this will default to NOW (pickup local time) | [optional] 
+**customer_reference** | **str** |  | [optional] 
+**customer_reference2** | **str** |  | [optional] 
+**carrier_id** | **int** |  | [optional] 
+**carrier_service_id** | **int** |  | [optional] 
+**sub_service_id** | **int** | The Machship ID of the sub-service under the carrier&#x27;s service (if there are any). If there are sub-services and this field is left blank,  the default will be selected | [optional] 
+**carrier_account_id** | **int** |  | [optional] 
+**company_carrier_account_id** | **int** |  | [optional] 
+**default_route_selection** | [**ConsolidationDefaultRouteSelection**](ConsolidationDefaultRouteSelection.md) |  | [optional] 
+**from_company_location_id** | **int** | The Machship Id of the saved company location that you want to use. If this is provided, Machship will link this consignment to your saved location and you do not have to provide the delivery details | [optional] 
+**from_name** | **str** |  | [optional] 
+**from_abbreviation** | **str** |  | [optional] 
+**from_contact** | **str** |  | [optional] 
+**from_phone** | **str** |  | [optional] 
+**from_email** | **str** |  | [optional] 
+**from_address_line1** | **str** |  | [optional] 
+**from_address_line2** | **str** |  | [optional] 
+**from_location_id** | **int** | The machship ID of the from (pickup) location. Can be left blank if supplying the suburb / postcode instead | [optional] 
+**from_location** | [**SendLocationV2**](SendLocationV2.md) |  | [optional] 
+**to_company_location_id** | **int** | The Machship Id of the saved company location that you want to use. If this is provided, Machship will link this consignment to your saved location and you do not have to provide the delivery details | [optional] 
+**to_name** | **str** |  | [optional] 
+**to_abbreviation** | **str** |  | [optional] 
+**to_contact** | **str** |  | [optional] 
+**to_phone** | **str** |  | [optional] 
+**to_email** | **str** |  | [optional] 
+**to_address_line1** | **str** |  | [optional] 
+**to_address_line2** | **str** |  | [optional] 
+**to_location_id** | **int** | The machship ID of the to (receiver) location. Can be left blank if supplying the suburb / postcode instead | [optional] 
+**to_location** | [**SendLocationV2**](SendLocationV2.md) |  | [optional] 
+**special_instructions** | **str** |  | [optional] 
+**question_ids** | **list[int]** | A collection of Machship IDs corresponding to questions who&#x27;s result is true | [optional] 
+**receiver_account_code** | **str** |  | [optional] 
+**receiver_account_id** | **int** |  | [optional] 
+**staff_member_name** | **str** |  | [optional] 
+**previous_consignment_id** | **int** |  | [optional] 
+**parent_consignment_id** | **int** |  | [optional] 
+**elective_surcharge_ids** | **list[int]** |  | [optional] 
+**consignment_options** | **str** |  | [optional] 
+**dgs_declaration** | **bool** | This must be set to true if the consignment contains Dangerous Goods. If this consignment does not have Dangerous Goods, this must be set to false. Note this flag only needs to be set if you are setup to consign Dangerous Goods through Machship | [optional] 
+**items** | [**list[CreateConsignmentItemV2]**](CreateConsignmentItemV2.md) | A collection of the items being sent | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
